@@ -2,12 +2,14 @@
 
 [[ "$EUID" -eq "0" ]] || { sudo -p "Please enter your password to continue: " "$0" "$@"; exit $?; }
 
+extra_flags=$1
 set -e
 
 rm -f ubuntu.iso
 
 source fetch_build.conf
 
-[ -z "$DOWNLOAD_ISO" ] && wget -O ubuntu.iso "https://releases.ubuntu.com/$CODENAME/ubuntu-$RELEASE-desktop-$ARCH.iso" || wget -O ubuntu.iso "$DOWNLOAD_ISO"
+[ -n "${extra_flags}" ] && echo "Downloading ubuntu.iso...";
+[ -z "$DOWNLOAD_ISO" ] && wget "${extra_flags}" -O ubuntu.iso "https://releases.ubuntu.com/$CODENAME/ubuntu-$RELEASE-desktop-$ARCH.iso" || wget "${extra_flags}" -O ubuntu.iso "$DOWNLOAD_ISO"
 
 make
