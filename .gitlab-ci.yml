@@ -21,7 +21,7 @@ build-job:       # This job runs in the build stage, which runs first.
   artifacts:
     expire_in: 1 week
     paths:
-    - /build/*.iso
+    - ./*.iso
   image: fuseteam/isobuilder:ubuntu-20.04
   script:
     - ./fetch_build -nv
