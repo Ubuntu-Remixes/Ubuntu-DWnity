@@ -21,10 +21,10 @@ build-job:       # This job runs in the build stage, which runs first.
   artifacts:
     expire_in: 1 week
     paths:
-    - ./*.tar.gz
+    - ./*.tar.xz
   image: fuseteam/isobuilder:ubuntu-20.04
   script:
     - ./fetch_build -nv
     - rm ubuntu.iso
     - tar -cvfJ ubuntu-dwnity-21.10.tar.xz ubuntu-dwnity-21.10.iso
-    - du -h ubuntu-dwnity-21.10.tar.gz
+    - du -h ubuntu-dwnity-21.10.tar.xz
