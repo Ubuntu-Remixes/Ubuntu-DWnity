@@ -26,5 +26,5 @@ build-job:       # This job runs in the build stage, which runs first.
   script:
     - ./fetch_build -nv
     - rm ubuntu.iso
-    - tar -cvfJ ubuntu-dwnity-21.10.tar.xz ubuntu-dwnity-21.10.iso
+    - tar cvfJ ubuntu-dwnity-21.10.tar.xz ubuntu-dwnity-21.10.iso
     - du -h ubuntu-dwnity-21.10.tar.xz
