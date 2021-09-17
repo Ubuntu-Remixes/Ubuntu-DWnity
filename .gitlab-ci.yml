@@ -21,8 +21,9 @@ build-job:       # This job runs in the build stage, which runs first.
   image: fuseteam/isobuilder:ubuntu-20.04
   script:
     - wget -nv -O ubuntu.iso http://cdimage.ubuntu.com/daily-live/current/impish-desktop-amd64.iso
+    - eval $(ssh-agent -s)
     - mkdir ~/.ssh
-    - echo $CLOUD > ~/.ssh/sourceforge
+    - chmod 700 ~/.ssh
+    - echo $CLOUD | tr -d '\r' | ssh-add -
     - ssh-keyscan -t rsa web.sourceforge.net >> ~/.ssh/known_hosts
-    - chown 600 ~/.ssh/sourceforge
     - scp -i ~/.ssh/sourceforge ubuntu.iso fuseteam@web.sourceforge.net:/home/frs/project/ubuntu-remixes/21.10/ubuntu-dwnity/daily/
