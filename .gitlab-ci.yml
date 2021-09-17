@@ -25,6 +25,6 @@ build-job:       # This job runs in the build stage, which runs first.
     - mkdir ~/.ssh
     - chmod 700 ~/.ssh
     - echo "$CLOUD" > ~/.ssh/sourceforge
-    - chmod600 ~/.ssh/sourceforge
+    - chmod 600 ~/.ssh/sourceforge
     - ssh-keyscan -t rsa web.sourceforge.net >> ~/.ssh/known_hosts
     - scp -i ~/.ssh/sourceforge ubuntu.iso fuseteam@web.sourceforge.net:/home/frs/project/ubuntu-remixes/21.10/ubuntu-dwnity/daily/
