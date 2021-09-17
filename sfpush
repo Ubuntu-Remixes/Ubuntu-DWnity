@@ -6,5 +6,5 @@ echo "$CLOUD" > ~/.ssh/sourceforge
 chmod 600 ~/.ssh/sourceforge
 ssh-keyscan -t rsa web.sourceforge.net >> ~/.ssh/known_hosts
 echo "pushing..."
-scp -i ~/.ssh/sourceforge ubuntu.iso fuseteam@web.sourceforge.net:/home/frs/project/ubuntu-remixes/21.10/ubuntu-dwnity/daily/
+scp -i ~/.ssh/sourceforge ubuntu-dwnity-20.10.iso fuseteam@web.sourceforge.net:/home/frs/project/ubuntu-remixes/21.10/ubuntu-dwnity/daily/
 echo "done!"
