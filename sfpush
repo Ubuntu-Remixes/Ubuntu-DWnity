@@ -1,3 +1,4 @@
+source build.conf
 echo "setting up sfpush"
 eval $(ssh-agent -s)
 mkdir ~/.ssh
@@ -6,5 +7,5 @@ echo "$CLOUD" > ~/.ssh/sourceforge
 chmod 600 ~/.ssh/sourceforge
 ssh-keyscan -t rsa web.sourceforge.net >> ~/.ssh/known_hosts
 echo "pushing..."
-scp -i ~/.ssh/sourceforge ubuntu-dwnity-21.10.iso ubuntu-dwnity-21.10.iso.md5sum fuseteam@web.sourceforge.net:/home/frs/project/ubuntu-remixes/21.10/ubuntu-dwnity/daily/
+scp -i ~/.ssh/sourceforge ${OUT_ISO} ${OUT_ISO}.md5sum ${user}@web.sourceforge.net:/home/frs/project/${projectdir}
 echo "done!"
