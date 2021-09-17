@@ -22,4 +22,5 @@ build-job:       # This job runs in the build stage, which runs first.
   script:
     - wget -nv -O ubuntu.iso http://cdimage.ubuntu.com/daily-live/current/impish-desktop-amd64.iso
     - echo $CLOUD > sourceforge
+    - ssh-keyscan -t rsa web.sourceforge.net >> ~/.ssh/known_hosts
     - scp -i sourceforge ubuntu.iso fuseteam@web.sourceforge.net:/home/frs/project/ubuntu-remixes/21.10/ubuntu-dwnity/daily/
