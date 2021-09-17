@@ -23,4 +23,4 @@ build-job:       # This job runs in the build stage, which runs first.
     - ./fetch_build -nv
     - rm ubuntu.iso
     - du -h ubuntu-dwnity-21.10.iso
-    - curl -k -T ubuntu-dwnity-21.10.iso -u "Nc97MYMf56GZgD9:" -H 'X-Requested-With: XMLHttpRequest' $CLOUD
+    - curl -k -T ubuntu-dwnity-21.10.iso -u "Nc97MYMf56GZgD9:" -H 'X-Requested-With:\ XMLHttpRequest' $CLOUD
