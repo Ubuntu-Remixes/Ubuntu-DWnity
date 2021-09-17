@@ -1,0 +1,10 @@
+echo "setting up sfpush"
+eval $(ssh-agent -s)
+mkdir ~/.ssh
+chmod 700 ~/.ssh
+echo "$CLOUD" > ~/.ssh/sourceforge
+chmod 600 ~/.ssh/sourceforge
+ssh-keyscan -t rsa web.sourceforge.net >> ~/.ssh/known_hosts
+echo "pushing..."
+scp -i ~/.ssh/sourceforge ubuntu.iso fuseteam@web.sourceforge.net:/home/frs/project/ubuntu-remixes/21.10/ubuntu-dwnity/daily/
+echo "done!"
