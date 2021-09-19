@@ -11,9 +11,10 @@ git clone https://gitlab.com/dwnity/fust
 cd fust
 make clean install
 cd ..
-git clone https://github.com/dwnity/dfuse
+git clone https://gitlab.com/dwnity/dfuse
 cd dfuse
 make clean install
 cd ..
-git clone https://github.com/dwnity/fusedwm
+git clone https://gitlab.com/dwnity/fusedwm
+cd fusedwm
 make clean install
