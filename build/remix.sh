@@ -11,4 +11,6 @@ apt-get purge -y unity-greeter
 
 flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
+snap install anbox
+
 bash suckless.sh
