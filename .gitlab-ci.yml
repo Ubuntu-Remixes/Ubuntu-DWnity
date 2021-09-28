@@ -25,4 +25,5 @@ build-job:       # This job runs in the build stage, which runs first.
   image: fuseteam/isobuilder:ubuntu-20.04
   script:
     - ./fetch_build -nv
+    - make
     - ./sfpush

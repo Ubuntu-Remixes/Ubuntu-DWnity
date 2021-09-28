@@ -11,5 +11,3 @@ source fetch_build.conf
 
 [ -n "${extra_flags}" ] && echo "Downloading ubuntu.iso...";
 [ -z "$DOWNLOAD_ISO" ] && wget "${extra_flags}" -O ubuntu.iso "https://releases.ubuntu.com/$CODENAME/ubuntu-$RELEASE-desktop-$ARCH.iso" || wget "${extra_flags}" -O ubuntu.iso "$DOWNLOAD_ISO"
-
-make
