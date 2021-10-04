@@ -20,8 +20,7 @@ gnome-initial-setup gnome-keyring gnome-keyring-pkcs11 gnome-logs \
 gnome-mahjongg gnome-menus gnome-mines gnome-online-accounts \
 gnome-screenshot gnome-session-bin gnome-session-canberra \
 gnome-session-common gnome-settings-daemon gnome-settings-daemon-common \
-gnome-shell gnome-shell-common gnome-shell-extension-appindicator \
-gnome-shell-extension-desktop-icons gnome-shell-extension-ubuntu-dock \
+gnome-shell gnome-shell-common gnome-shell-extension-appindicator gnome-shell-extension-ubuntu-dock \
 gnome-startup-applications gnome-sudoku gnome-terminal \
 gnome-terminal-data gnome-themes-extra gnome-themes-extra-data gnome-todo \
 gnome-todo-common gnome-user-docs gnome-video-effects \
