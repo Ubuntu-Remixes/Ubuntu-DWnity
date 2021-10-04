@@ -1,7 +1,7 @@
 #!/bin/sh
 # Remve GNOME stuff
 apt-get remove -y ubuntu-desktop* gdm3 ubuntu-session
-apt-get autoremove -y
+apt-get autoremove -y --purge
 apt-get install -y software-properties-gtk
 
 add-apt-repository -y ppa:~ubuntu-unity-devs/stable
@@ -13,15 +13,6 @@ apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 913558C8A5E552A7
 apt-get update
 
 apt-get install -y libpam-usb synapse sshfs vim mlocate make git dwm gcc libxft-dev libx11-dev libxinerama-dev compton nitrogen scrot byobu make git kdeconnect appimagelauncher flatpak ubiquity ubiquity-frontend-gtk ubiquity-slideshow-ubuntu lightdm lightdm-gtk-greeter ubuntu-unity-desktop yaru-unity7 ubuntu-unity-settings ubuntu-unity-backgrounds plymouth-theme-ubuntu-unity
-apt-get purge -y gnome-initial-setup gnome-control-center gnome-calendar gnome-characters \
-gnome-font-viewer gnome-keyring gnome-keyring-pkcs11 gnome-logs \
-gnome-mahjongg gnome-menus gnome-mines gnome-online-accounts \
-gnome-screenshot gnome-session-bin \
-gnome-shell gnome-shell-common gnome-shell-extension-appindicator gnome-shell-extension-ubuntu-dock \
-gnome-startup-applications gnome-sudoku gnome-terminal \
-gnome-terminal-data gnome-themes-extra gnome-themes-extra-data gnome-todo \
-gnome-todo-common gnome-video-effects \
-nautilus-extension-gnome-terminal pinentry-gnome3;
 
 flatpak remote-add --system --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
