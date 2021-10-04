@@ -13,5 +13,5 @@ cd fusedwm
 make clean install
 cd ..
 git clone https://gitlab.com/tuxecure/dwnity/fusemoji
-cd fuseemoji
+cd fusemoji
 make install
