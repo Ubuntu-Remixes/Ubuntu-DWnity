@@ -1,6 +1,6 @@
 #!/bin/sh
 # Remve GNOME stuff
-apt-get remove -y ubuntu-desktop
+apt-get remove -y ubuntu-desktop gdm3 ubuntu-session gnome-initial-setup gnome-control-center
 apt-get autoremove -y
 apt-get install -y software-properties-gtk
 
