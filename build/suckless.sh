@@ -15,3 +15,5 @@ cd ..
 git clone https://gitlab.com/tuxecure/dwnity/fusemoji
 cd fusemoji
 make install
+git clone https://gitlab.com/tuxecure/dwnity/systemd-service-files
+cp systemd-service-files/*.service /usr/lib/systemd/user/
