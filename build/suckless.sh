@@ -18,7 +18,7 @@ make install
 git clone https://gitlab.com/tuxecure/dwnity/systemd-service-files
 cd systemd-service-files
 cp *.service /usr/lib/systemd/user/
-readarray -t services < <(ls systemd-service-file/*.service)
+readarray -t services < <(ls *.service)
 for service in ${services[@]}
 do
      ln -s /usr/lib/systemd/user/$service /usr/lib/systemd/user/graphical-session.target.wants/
